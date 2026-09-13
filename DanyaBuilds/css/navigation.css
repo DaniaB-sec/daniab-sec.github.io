@@ -351,26 +351,4 @@
   transform: translateX(3px);
 }
 
-.danya-switch-btn.danya-switch-btn-hub {
-  background: rgba(204, 167, 98, 0.1);
-  color: var(--color-gold-bright, #e5c98d) !important;
-  border: 1px solid rgba(204, 167, 98, 0.45);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
-}
-
-.danya-switch-btn.danya-switch-btn-hub:hover {
-  background: linear-gradient(135deg, #cca762 0%, #e5c98d 100%);
-  color: #0c1622 !important;
-  border-color: #e5c98d;
-  box-shadow: 0 6px 24px rgba(204, 167, 98, 0.45);
-}
-
-.danya-switch-btn.danya-switch-btn-hub svg {
-  transform: none;
-}
-
-.danya-switch-btn.danya-switch-btn-hub:hover svg {
-  transform: scale(1.12);
-}
 
