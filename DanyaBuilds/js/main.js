@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function initCrossSitePortal() {
   const btn = document.getElementById('btn-to-danyas-world');
   if (btn && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    if (window.location.pathname.includes('/DanyaBuilds/')) {
+      return;
+    }
     btn.href = 'http://localhost:8080/index.html';
   }
 }
