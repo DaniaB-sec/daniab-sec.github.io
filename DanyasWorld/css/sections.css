@@ -1,0 +1,803 @@
+/* ==========================================================================
+   DANYA'S WORLD — SECTION EXPERIENCES & PLACEHOLDER STYLES
+   Globe theme: Earthy green base, polished gold borders, margins & accents.
+   Minor oceanic blue accents on badges.
+   ========================================================================== */
+
+/* Section Hero Area */
+.section-hero {
+  margin-bottom: 3.5rem;
+  max-width: 780px;
+}
+
+.section-hero h1 {
+  margin-bottom: 0.85rem;
+  color: #fffef9;
+}
+
+.section-intro-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-ink-secondary);
+}
+
+.section-intro-text p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-ink-secondary);
+  margin-bottom: 1.15rem;
+}
+
+.section-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Content Groups */
+.content-group {
+  margin-bottom: 4rem;
+}
+
+.content-group-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.content-group-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  margin-bottom: 1.75rem;
+}
+
+/* Grid Layouts */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 820px) {
+  .grid-2-col,
+  .grid-3-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Feature Spotlight Card (e.g. Piano in Music, Mão na Massa in Kitchen) */
+.feature-spotlight {
+  background: linear-gradient(135deg, #1b3323 0%, #14271a 100%);
+  border: 1px solid var(--color-gold-border);
+  border-left: 5px solid var(--color-gold-warm);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+
+.feature-spotlight-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .feature-spotlight-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Triptych / 3-Slit Picture Frame */
+.slit-gallery {
+  display: flex;
+  height: 280px;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+  background-color: rgba(204, 167, 98, 0.35); /* Refined gold divider between slits */
+  gap: 3px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.slit-item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transition: flex var(--transition-normal);
+  cursor: pointer;
+}
+
+.slit-item img,
+.slit-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-normal), filter var(--transition-fast);
+  filter: brightness(0.95);
+}
+
+.slit-item:hover {
+  flex: 1.8;
+}
+
+.slit-item:hover img,
+.slit-item:hover video {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.slit-gallery:hover {
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 16px rgba(204, 167, 98, 0.2);
+}
+
+@media (max-width: 640px) {
+  .slit-gallery {
+    height: 230px;
+  }
+}
+
+/* Video Containers & Piano Showcase */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: #0b170f;
+  border: 1px solid var(--color-gold-border);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.video-wrapper:hover {
+  border-color: var(--color-gold-bright);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 440px;
+  object-fit: contain;
+  background-color: #000;
+}
+
+/* Primary Video Spotlight (piano1 draws the eye first) */
+.video-primary {
+  border: 2px solid var(--color-gold-bright);
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.55), 0 0 18px rgba(204, 167, 98, 0.28);
+}
+
+.video-primary:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65), 0 0 24px rgba(229, 201, 141, 0.4);
+}
+
+.video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  background-color: var(--color-blue-ocean);
+  border: 1px solid var(--color-gold-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.75rem;
+}
+
+.video-badge.primary {
+  color: var(--color-ink-inverse);
+  background-color: var(--color-gold-warm);
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 0 12px rgba(204, 167, 98, 0.4);
+}
+
+/* 2-Column Piano Videos Grid: Primary (wider) + Supporting */
+.piano-videos-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .piano-videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Media & Content Placeholders */
+.media-placeholder {
+  background-color: var(--color-green-moss);
+  border: 1.5px dashed var(--color-gold-border);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  min-height: 220px;
+  box-shadow: var(--shadow-subtle);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.media-placeholder:hover {
+  border-color: var(--color-gold-bright);
+  background-color: var(--color-green-card-hover);
+  box-shadow: 0 0 18px rgba(204, 167, 98, 0.22);
+}
+
+.media-placeholder.ratio-16-9 {
+  min-height: 260px;
+}
+
+.media-placeholder.ratio-square {
+  min-height: 220px;
+}
+
+.placeholder-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(204, 167, 98, 0.16);
+  border: 1px solid var(--color-gold-border);
+  color: var(--color-gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.placeholder-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.placeholder-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  background-color: var(--color-blue-ocean);
+  border: 1px solid var(--color-gold-border);
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-title {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.placeholder-meta {
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+  line-height: 1.4;
+}
+
+/* Audio Recording Placeholder */
+.audio-track-placeholder {
+  background-color: var(--color-green-moss);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.audio-track-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.audio-track-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.audio-track-status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-gold-warm);
+}
+
+.waveform-placeholder {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0.25rem 0;
+}
+
+.waveform-bar {
+  flex: 1;
+  background-color: var(--color-green-mist);
+  border-radius: 2px;
+  height: 40%;
+  transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+.audio-track-placeholder:hover .waveform-bar {
+  background-color: var(--color-gold-warm);
+}
+
+.waveform-bar:nth-child(2n) { height: 65%; }
+.waveform-bar:nth-child(3n) { height: 85%; }
+.waveform-bar:nth-child(4n) { height: 50%; }
+.waveform-bar:nth-child(5n) { height: 95%; }
+
+/* Editorial Narrative Card (for future real notes & stories) */
+.story-card {
+  background-color: var(--color-green-moss);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-subtle);
+  transition: border-color var(--transition-fast), transform var(--transition-normal);
+}
+
+.story-card:hover {
+  border-color: var(--color-gold-bright);
+  transform: translateY(-2px);
+}
+
+/* Card Media Image Container */
+.card-media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  margin-bottom: 1.25rem;
+  background-color: var(--color-green-forest);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.card-media-wrapper.ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.card-media-wrapper.ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.card-media-wrapper.ratio-portrait,
+.card-media-wrapper.ratio-9-16 {
+  aspect-ratio: 9 / 16;
+}
+
+.card-media-wrapper img,
+.card-media-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-media-wrapper img {
+  transition: transform var(--transition-normal);
+}
+
+.story-card:hover .card-media-wrapper img,
+.photo-card:hover .card-media-wrapper img,
+.feature-spotlight:hover .card-media-wrapper img,
+.card-media-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+/* Video wrapper inside multimedia cards */
+.card-media-wrapper.video-media-wrapper {
+  background-color: #050d08;
+}
+
+.card-media-wrapper.video-media-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: none !important;
+}
+
+/* Equal-size card containers for multimedia side-by-side grids */
+.multimedia-card,
+.church-media-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.multimedia-card .card-media-wrapper,
+.church-media-card .card-media-wrapper {
+  margin-bottom: 1rem;
+}
+
+.multimedia-card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.multimedia-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.multimedia-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-ink-secondary);
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.photo-card {
+  cursor: pointer;
+}
+
+.photo-card:hover .card-media-wrapper {
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(204, 167, 98, 0.25);
+}
+
+.story-card-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.story-card-placeholder-text {
+  font-size: 0.9rem;
+  color: var(--color-ink-secondary);
+  border-left: 2px solid var(--color-gold-border);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.story-card-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-ink-primary);
+  margin: 0;
+}
+
+/* Places Timeline / Route Component */
+.route-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-top: 2rem;
+}
+
+.route-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.85rem;
+  width: 2px;
+  background-color: var(--color-gold-border);
+}
+
+.route-node {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.route-node:last-child {
+  margin-bottom: 0;
+}
+
+.route-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.25rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-green-base);
+  border: 3px solid var(--color-gold-bright);
+  box-shadow: 0 0 10px rgba(204, 167, 98, 0.5);
+}
+
+.route-card {
+  background-color: var(--color-green-moss);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.65rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.route-card:hover {
+  border-color: var(--color-gold-bright);
+}
+
+.route-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.route-place-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.route-type-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-gold-bright);
+  background-color: var(--color-blue-ocean);
+  border: 1px solid var(--color-gold-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.route-card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-ink-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Compact Certificate Attachment (Clickable documentary badge) */
+.cert-attachment {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-green-forest);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cert-attachment:hover {
+  border-color: var(--color-gold-bright);
+  background-color: var(--color-green-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 0 12px rgba(204, 167, 98, 0.2);
+}
+
+.cert-thumb {
+  width: 68px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  flex-shrink: 0;
+  background-color: #ffffff;
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cert-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cert-sub {
+  font-size: 0.82rem;
+  color: var(--color-ink-secondary);
+  line-height: 1.35;
+}
+
+.cert-action-tag {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-gold-warm);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background-color: rgba(204, 167, 98, 0.12);
+  border: 1px solid var(--color-gold-border);
+  transition: all var(--transition-fast);
+}
+
+.cert-attachment:hover .cert-action-tag {
+  color: #ffffff;
+  background-color: var(--color-gold-warm);
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 0 8px rgba(204, 167, 98, 0.4);
+}
+
+/* Certificate Lightbox Dialog */
+.cert-dialog {
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  background-color: var(--color-green-moss);
+  color: var(--color-ink-primary);
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(204, 167, 98, 0.3);
+  overflow: hidden;
+}
+
+.cert-dialog::backdrop {
+  background-color: rgba(8, 16, 11, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.cert-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--color-green-forest);
+  border-bottom: 1px solid var(--color-gold-border);
+}
+
+.cert-dialog-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: #fffef9;
+  margin: 0;
+}
+
+.cert-dialog-close {
+  background: none;
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-gold-warm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: all var(--transition-fast);
+}
+
+.cert-dialog-close:hover {
+  color: #ffffff;
+  border-color: var(--color-gold-bright);
+  background-color: var(--color-green-card-hover);
+}
+
+.cert-dialog-body {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b170f;
+  max-height: calc(90vh - 70px);
+  overflow: auto;
+}
+
+.cert-dialog-body img {
+  max-width: 100%;
+  max-height: calc(85vh - 90px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-gold-border);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+  background-color: #ffffff;
+}
+
+/* Dynamic Family Photo Collage (Masonry layout) */
+.family-collage {
+  column-count: 4;
+  column-gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 1100px) {
+  .family-collage {
+    column-count: 3;
+    column-gap: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .family-collage {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .family-collage {
+    column-count: 1;
+  }
+}
+
+.collage-card {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  background-color: var(--color-green-moss);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.28s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.collage-card:hover {
+  transform: translateY(-6px) scale(1.18);
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.82), 0 0 24px rgba(204, 167, 98, 0.38);
+  z-index: 30;
+}
+
+.collage-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.2s ease;
+  filter: brightness(0.97);
+}
+
+.collage-card:hover img {
+  filter: brightness(1.04);
+}

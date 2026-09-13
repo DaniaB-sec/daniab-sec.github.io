@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danya's World — Personal Atlas & Portfolio</title>
+  <meta name="description" content="A personal atlas of creations, interests, and experiences by Danya for the Apple Developer Academy at PUCPR.">
+  
+  <!-- Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navigation.css?v=20260913">
+  <link rel="stylesheet" href="css/atlas-map.css">
+</head>
+<body>
+
+  <!-- Persistent Top Navigation -->
+  <header class="site-nav-header">
+    <div class="container site-nav-container">
+      <a href="index.html" class="site-brand" aria-label="Danya's World — Return to Home">
+        <svg class="site-brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+        </svg>
+        <span>Danya’s World</span>
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav id="primary-nav" aria-label="Primary navigation">
+        <ul class="site-nav-menu">
+          <li><a href="music.html" class="nav-link">Music</a></li>
+          <li><a href="multimedia.html" class="nav-link">Multimedia</a></li>
+          <li><a href="kitchen.html" class="nav-link">Kitchen</a></li>
+          <li><a href="animals.html" class="nav-link">Animals</a></li>
+          <li><a href="community.html" class="nav-link">Community</a></li>
+          <li><a href="places.html" class="nav-link">Places</a></li>
+          <li><a href="family.html" class="nav-link">Family</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Warm, Personal Introduction -->
+      <header class="atlas-hero">
+        <div class="sector-badge">Personal Atlas</div>
+        <h1>Danya’s World</h1>
+        <p class="intro-subtitle">A collection of creations, experiences, and interests</p>
+        <p class="intro-text">
+          Welcome. This is a personal atlas representing different corners of my life, background, and creative work. Explore whichever area interests you.
+        </p>
+      </header>
+
+      <!-- The Atlas Map (Clean, Immediately Legible) -->
+      <section class="atlas-frame" aria-label="Interactive Atlas Map of Danya's World">
+        <div class="atlas-frame-inner">
+          
+          <div class="atlas-header-tag">
+            <span>Explore Destinations</span>
+          </div>
+
+          <div class="atlas-map-layout">
+
+            <!-- 1. Music -->
+            <a href="music.html" class="atlas-region region-music" aria-label="Go to Music section">
+              <div>
+                <div class="region-top">
+                  <div class="region-glyph">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 18V5l12-2v13"></path>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <circle cx="18" cy="16" r="3"></circle>
+                    </svg>
+                  </div>
+                  <span class="region-corner-code">01</span>
+                </div>
+                <h2 class="region-title">Music</h2>
+                <p class="region-desc">Piano performances, guitar, and recordings</p>
+              </div>
+              <span class="region-arrow">Enter section &rarr;</span>
+            </a>
+
+            <!-- 2. Multimedia -->
+            <a href="multimedia.html" class="atlas-region region-multimedia" aria-label="Go to Multimedia section">
+              <div>
+                <div class="region-top">
+                  <div class="region-glyph">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                      <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                  </div>
+                  <span class="region-corner-code">02</span>
+                </div>
+                <h2 class="region-title">Multimedia</h2>
+                <p class="region-desc">Photography, video production, and visual work</p>
+              </div>
+              <span class="region-arrow">Enter section &rarr;</span>
+            </a>
+
+            <!-- 3. Kitchen -->
+            <a href="kitchen.html" class="atlas-region region-kitchen" aria-label="Go to Kitchen section">
+              <div>
+                <div class="region-top">
+                  <div class="region-glyph">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                      <line x1="6" y1="1" x2="6" y2="4"></line>
+                      <line x1="10" y1="1" x2="10" y2="4"></line>
+                      <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                  </div>
+                  <span class="region-corner-code">03</span>
+                </div>
+                <h2 class="region-title">Kitchen</h2>
+                <p class="region-desc">Cooking experiments and gastronomy workshop</p>
+              </div>
+              <span class="region-arrow">Enter section &rarr;</span>
+            </a>
+
+            <!-- 4. Animals -->
+            <a href="animals.html" class="atlas-region region-animals" aria-label="Go to Animals section">
+              <div>
+                <div class="region-top">
+                  <div class="region-glyph">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="4" r="2"></circle>
+                      <circle cx="18" cy="8" r="2"></circle>
+                      <circle cx="20" cy="16" r="2"></circle>
+                      <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.5 17.5 6 15c0-2.76 1.34-5 3-5Z"></path>
+                    </svg>
+                  </div>
+                  <span class="region-corner-code">04</span>
+                </div>
+                <h2 class="region-title">Animals</h2>
+                <p class="region-desc">Companion animals, rescues, and memories</p>
+              </div>
+              <span class="region-arrow">Enter section &rarr;</span>
+            </a>
+
+            <!-- 5. Community -->
+            <a href="community.html" class="atlas-region region-community" aria-label="Go to Community section">
+              <div>
+                <div class="region-top">
+                  <div class="region-glyph">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <span class="region-corner-code">05</span>
+                </div>
+                <h2 class="region-title">Community</h2>
+                <p class="region-desc">Marista youth, Easter action, and Grupo Poliwomen</p>
+              </div>
+              <span class="region-arrow">Enter section &rarr;</span>
+            </a>
+
+            <!-- 6. Places -->
+            <a href="places.html" class="atlas-region region-places" aria-label="Go to Places section">
+              <div>
+                <div class="region-top">
+                  <div class="region-glyph">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <span class="region-corner-code">06</span>
+                </div>
+                <h2 class="region-title">Places</h2>
+                <p class="region-desc">Cities, states, and environments lived in</p>
+              </div>
+              <span class="region-arrow">Enter section &rarr;</span>
+            </a>
+
+            <!-- 7. Family -->
+            <a href="family.html" class="atlas-region region-family" aria-label="Go to Family section">
+              <div>
+                <div class="region-top">
+                  <div class="region-glyph">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22v-9"></path>
+                      <path d="M9 13a4 4 0 0 1-4-4 4 4 0 0 1 4-4 4 4 0 0 1 4 4v1"></path>
+                      <path d="M15 13a4 4 0 0 0 4-4 4 4 0 0 0-4-4 4 4 0 0 0-4 4v1"></path>
+                    </svg>
+                  </div>
+                  <span class="region-corner-code">07</span>
+                </div>
+                <h2 class="region-title">Family</h2>
+                <p class="region-desc">Foundations, photographs, and memories</p>
+              </div>
+              <span class="region-arrow">Enter section &rarr;</span>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Site Global Footer (Three Columns Side-by-Side + Disclaimer Underneath + Cross-Site Portal) -->
+      <footer class="site-global-footer">
+        <div class="footer-meta-grid" style="display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 1.5rem; align-items: start; width: 100%;">
+          <div class="footer-meta-col footer-col-left" style="text-align: left; font-style: italic;">
+            <p class="footer-name" style="font-style: italic; margin-bottom: 0.35rem;">Danielle "Danya" Beck.</p>
+            <p style="font-style: italic; margin-bottom: 0.25rem;">Curitiba, Parana.</p>
+            <p style="font-style: italic; margin-bottom: 0.25rem;">2026.</p>
+          </div>
+          <div class="footer-meta-col footer-col-center" style="text-align: center; font-style: italic;">
+            <p style="font-style: italic; margin-bottom: 0.25rem;">LinkedIn: <a href="https://www.linkedin.com/in/danielle-beck-057b423b5/" target="_blank" rel="noopener noreferrer">Danielle (Danya) Beck</a></p>
+            <p style="font-style: italic; margin-bottom: 0.25rem;">Email: <a href="mailto:danyabeck.sec@gmail.com">danyabeck.sec@gmail.com</a></p>
+            <p style="font-style: italic; margin-bottom: 0.25rem;">Phone: I am a cybersec student, I couldn't possibly share that.</p>
+          </div>
+          <div class="footer-meta-col footer-col-right" style="text-align: right; font-style: italic;">
+            <p style="font-style: italic; margin-bottom: 0.25rem;">Student at Pontifícia Universidade Católica do Paraná.</p>
+            <p style="font-style: italic; margin-bottom: 0.25rem;">Segundo Semestre.</p>
+            <p style="font-style: italic; margin-bottom: 0.25rem;">Turno: Noite.</p>
+          </div>
+        </div>
+        <div class="footer-disclaimer" style="padding-top: 1.35rem; border-top: 1px solid rgba(204, 167, 98, 0.2); text-align: center; width: 100%;">
+          <p style="font-style: italic; color: var(--color-gold-bright); max-width: 820px; margin: 0 auto; line-height: 1.65; font-size: 0.88rem;">“This website was created with heavy-involvement of Artificial Intelligence, specifically the Antigravity model by Google. Unfortunately for Danya, Web Development is one of her weaker areas. She apologizes and promises to improve in the near future.”</p>
+        </div>
+        <!-- Cross-Site Switcher Button -->
+        <div class="footer-switcher">
+          <a href="../DanyaBuilds/index.html" class="danya-switch-btn" id="btn-to-danya-builds">
+            <span>Go to Danya Builds</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/atlas.js"></script>
+</body>
+</html>

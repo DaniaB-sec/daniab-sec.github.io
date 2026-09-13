@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danya Beck — Two Ways of Looking at the Same World</title>
+  <meta name="description" content="Danya Beck's dual portfolio: Danya's World (creative expressions & storytelling) and Danya Builds (cybersecurity, AI, and quantum engineering).">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans & Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Shared Accents */
+      --gold-primary: #cca762;
+      --gold-light: #e5c98d;
+      --gold-glow: rgba(204, 167, 98, 0.25);
+      --gold-border: rgba(204, 167, 98, 0.35);
+
+      /* Creative Twin (Earthy Forest Greens) */
+      --green-deep: #0c1810;
+      --green-mid: #132418;
+      --green-surface: #182e1f;
+      --green-border: rgba(119, 143, 125, 0.3);
+      --green-accent: #778f7d;
+      --green-glow: rgba(119, 143, 125, 0.2);
+
+      /* Technical Twin (Oceanic Navy Blues) */
+      --blue-deep: #09131d;
+      --blue-mid: #101f2c;
+      --blue-surface: #15293b;
+      --blue-border: rgba(94, 129, 172, 0.3);
+      --blue-accent: #5e81ac;
+      --blue-glow: rgba(94, 129, 172, 0.2);
+
+      /* Typography & Neutral Canvas */
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --text-main: #fcfbf7;
+      --text-muted: #b8c4ba;
+      --text-dim: #7e8e82;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100vh;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: #080f14;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Dual-World Colliding Background */
+    body {
+      background:
+        radial-gradient(ellipse 65% 85% at 15% 35%, rgba(19, 36, 24, 0.85) 0%, transparent 70%),
+        radial-gradient(ellipse 65% 85% at 85% 65%, rgba(16, 31, 44, 0.85) 0%, transparent 70%),
+        radial-gradient(circle at 50% 50%, rgba(204, 167, 98, 0.04) 0%, transparent 60%),
+        #091117;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Subtle subtle star/particle texture overlay */
+    .cosmic-grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(204, 167, 98, 0.12) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    /* Central Layout Container */
+    .gateway-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 3rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* Header Section */
+    .gateway-header {
+      text-align: center;
+      margin-bottom: 3.25rem;
+      animation: fadeIn 0.9s ease-out;
+    }
+
+    .nexus-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.4rem 1.15rem;
+      border-radius: 9999px;
+      background: rgba(204, 167, 98, 0.1);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .nexus-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-primary);
+      box-shadow: 0 0 10px var(--gold-primary);
+    }
+
+    .gateway-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3.2rem, 6.5vw, 5.2rem);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.05;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .gateway-epigraph {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 1.95rem);
+      font-style: italic;
+      color: var(--gold-light);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      max-width: 680px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    /* Split Gateway Portals Grid */
+    .portals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.25rem;
+      position: relative;
+      margin-bottom: 3.5rem;
+      perspective: 1000px;
+    }
+
+    /* Center Nexus Seam Decorator (Desktop) */
+    .portal-nexus-seam {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nexus-symbol {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #080f14;
+      border: 1.5px solid var(--gold-primary);
+      box-shadow: 0 0 24px rgba(204, 167, 98, 0.4), inset 0 0 12px rgba(204, 167, 98, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+    }
+
+    .nexus-symbol svg {
+      width: 24px;
+      height: 24px;
+      filter: drop-shadow(0 0 4px var(--gold-primary));
+    }
+
+    /* Individual Portal Card */
+    .portal-card {
+      position: relative;
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      border: 1px solid transparent;
+    }
+
+    /* Creative Portal (Danya's World) */
+    .portal-creative {
+      background: linear-gradient(155deg, rgba(24, 46, 31, 0.75) 0%, rgba(12, 24, 16, 0.92) 100%);
+      border-color: var(--green-border);
+    }
+
+    .portal-creative::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #3d6a4a, var(--gold-primary));
+      opacity: 0.8;
+    }
+
+    .portal-creative:hover,
+    .portal-creative:focus-visible {
+      transform: translateY(-6px) scale(1.015);
+      border-color: var(--gold-border);
+      box-shadow: 0 24px 60px rgba(12, 24, 16, 0.7), 0 0 35px var(--green-glow);
+    }
+
+    /* Technical Portal (Danya Builds) */
+    .portal-technical {
+      background: linear-gradient(155deg, rgba(21, 41, 59, 0.75) 0%, rgba(9, 19, 29, 0.92) 100%);
+      border-color: var(--blue-border);
+    }
+
+    .portal-technical::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--gold-primary), #487ca3);
+      opacity: 0.8;
+    }
+
+    .portal-technical:hover,
+    .portal-technical:focus-visible {
+      transform: translateY(-6px) scale(1.015);
+      border-color: var(--gold-border);
+      box-shadow: 0 24px 60px rgba(9, 19, 29, 0.7), 0 0 35px var(--blue-glow);
+    }
+
+    /* Ambient Corner Radial on Cards */
+    .portal-card .card-ambient-light {
+      position: absolute;
+      top: -30%;
+      right: -30%;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      opacity: 0.35;
+    }
+
+    .portal-creative .card-ambient-light {
+      background: radial-gradient(circle, rgba(119, 143, 125, 0.35) 0%, transparent 70%);
+    }
+
+    .portal-technical .card-ambient-light {
+      background: radial-gradient(circle, rgba(94, 129, 172, 0.35) 0%, transparent 70%);
+    }
+
+    .portal-card:hover .card-ambient-light {
+      opacity: 0.7;
+    }
+
+    /* Card Typography & Content */
+    .card-top {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card-twin-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .portal-creative .card-twin-label {
+      color: #9cb8a2;
+    }
+
+    .portal-technical .card-twin-label {
+      color: #93b5dd;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 3.8vw, 3.2rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-subtitle {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 1.4rem;
+    }
+
+    .card-description {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .card-description strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .card-description em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    /* Sector Highlights Pills */
+    .card-sectors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .sector-pill {
+      font-size: 0.82rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(4px);
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    }
+
+    .portal-creative .sector-pill {
+      background: rgba(18, 38, 25, 0.7);
+      border: 1px solid rgba(119, 143, 125, 0.25);
+      color: #c9dbc9;
+    }
+
+    .portal-creative:hover .sector-pill {
+      border-color: rgba(204, 167, 98, 0.3);
+    }
+
+    .portal-technical .sector-pill {
+      background: rgba(17, 34, 49, 0.7);
+      border: 1px solid rgba(94, 129, 172, 0.25);
+      color: #cadbee;
+    }
+
+    .portal-technical:hover .sector-pill {
+      border-color: rgba(204, 167, 98, 0.3);
+    }
+
+    /* Action CTA Button */
+    .card-cta-wrapper {
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+    }
+
+    .portal-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.1rem 1.75rem;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .portal-creative .portal-btn {
+      background: linear-gradient(135deg, rgba(32, 60, 41, 0.95), rgba(18, 35, 24, 0.95));
+      border: 1.5px solid var(--gold-border);
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .portal-creative:hover .portal-btn {
+      background: linear-gradient(135deg, var(--gold-primary), #b38c4b);
+      color: #0c1810;
+      border-color: #f7e4b2;
+      box-shadow: 0 8px 30px rgba(204, 167, 98, 0.45);
+    }
+
+    .portal-technical .portal-btn {
+      background: linear-gradient(135deg, rgba(25, 52, 77, 0.95), rgba(14, 28, 41, 0.95));
+      border: 1.5px solid var(--gold-border);
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .portal-technical:hover .portal-btn {
+      background: linear-gradient(135deg, var(--gold-primary), #b38c4b);
+      color: #09131d;
+      border-color: #f7e4b2;
+      box-shadow: 0 8px 30px rgba(204, 167, 98, 0.45);
+    }
+
+    .btn-arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .portal-card:hover .btn-arrow {
+      transform: translateX(6px);
+    }
+
+    /* Footer Section */
+    .gateway-footer {
+      border-top: 1px solid rgba(204, 167, 98, 0.2);
+      padding: 2.25rem 1.5rem 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 1380px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .footer-identity {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.35rem;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Subtle Keyframes */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 980px) {
+      .portals-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .portal-nexus-seam {
+        display: none;
+      }
+
+      .portal-card {
+        padding: 2.5rem 1.75rem;
+      }
+
+      .gateway-header {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gateway-wrapper {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .gateway-title {
+        font-size: 2.75rem;
+      }
+
+      .gateway-epigraph {
+        font-size: 1.25rem;
+      }
+
+      .card-title {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cosmic-grain" aria-hidden="true"></div>
+
+  <div class="gateway-wrapper">
+    <!-- Header -->
+    <header class="gateway-header">
+      <div class="nexus-badge">
+        <span class="nexus-dot"></span>
+        <span>Dual Portfolio & Digital Atlas</span>
+      </div>
+      <h1 class="gateway-title">Danya Beck</h1>
+      <p class="gateway-epigraph">Two ways of looking at the same world.</p>
+    </header>
+
+    <!-- Interactive Portals Grid: Two Worlds Collide -->
+    <main class="portals-grid" aria-label="Portfolio Portals">
+      <!-- Center Nexus Badge (Desktop Seam) -->
+      <div class="portal-nexus-seam" aria-hidden="true">
+        <div class="nexus-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Portal 1: Danya's World (Creative Twin) -->
+      <a href="./DanyasWorld/index.html" class="portal-card portal-creative" aria-label="Enter Danya's World: The Creative Twin">
+        <div class="card-ambient-light" aria-hidden="true"></div>
+        <div class="card-top">
+          <div class="card-twin-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            <span>The Creative Twin &bull; Earthy Canvas</span>
+          </div>
+          <h2 class="card-title">Danya’s World</h2>
+          <p class="card-subtitle">The creative & personal side</p>
+          <p class="card-description">
+            Curiosity, design, storytelling, music, experiences, and the things that make me <em>me</em>. An expansive cartographic atlas spanning musical performance, audiovisual mixing, gastronomy, community leadership, animal rescue, and formative foundations.
+          </p>
+
+          <div class="card-sectors">
+            <span class="sector-pill">Piano, Violin & Guitar</span>
+            <span class="sector-pill">Multimedia & Broadcast</span>
+            <span class="sector-pill">Gastronomy (Mão na Massa)</span>
+            <span class="sector-pill">Animal Welfare & Rescues</span>
+            <span class="sector-pill">Community Action & Mentorship</span>
+            <span class="sector-pill">Formative Places</span>
+            <span class="sector-pill">Family Foundations</span>
+          </div>
+        </div>
+
+        <div class="card-cta-wrapper">
+          <div class="portal-btn">
+            <span>Explore Danya’s World</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portal 2: Danya Builds (Technical Twin) -->
+      <a href="./DanyaBuilds/index.html" class="portal-card portal-technical" aria-label="Enter Danya Builds: The Technical Twin">
+        <div class="card-ambient-light" aria-hidden="true"></div>
+        <div class="card-top">
+          <div class="card-twin-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <span>The Technical Twin &bull; Oceanic Canvas</span>
+          </div>
+          <h2 class="card-title">Danya Builds</h2>
+          <p class="card-subtitle">The technical & engineering side</p>
+          <p class="card-description">
+            Cybersecurity, programming, research, projects, and the things I <em>build</em>. A rigorous engineering atlas highlighting defense systems, post-quantum cryptography, AI evaluation frameworks, quantum circuit simulations, and field certifications.
+          </p>
+
+          <div class="card-sectors">
+            <span class="sector-pill">Cybersecurity & Defense</span>
+            <span class="sector-pill">Cryptography & Ciphers</span>
+            <span class="sector-pill">AI Models & SafePrompt</span>
+            <span class="sector-pill">Quantum Computing & QRNG</span>
+            <span class="sector-pill">Embedded & IoT Systems</span>
+            <span class="sector-pill">Field Certifications (APH/Defesa)</span>
+          </div>
+        </div>
+
+        <div class="card-cta-wrapper">
+          <div class="portal-btn">
+            <span>Explore Danya Builds</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gateway-footer">
+      <div class="footer-identity">Danya Beck</div>
+      <p class="footer-note">Crafted for the Apple Developer Academy application portfolio.</p>
+      <div class="footer-links">
+        <a href="https://github.com/DaniaB-sec" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub: DaniaB-sec</span>
+        </a>
+        <a href="https://www.linkedin.com/in/danielle-beck-057b423b5/" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>LinkedIn: Danya Beck</span>
+        </a>
+        <a href="mailto:daniabeck.secl@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Email: daniabeck.secl@gmail.com</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

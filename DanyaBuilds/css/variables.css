@@ -1,0 +1,67 @@
+/* ==========================================================================
+   DANYA BUILDS — DESIGN SYSTEM & TOKENS
+   Theme: Technical twin of Danya's World.
+   Base: Deep slate / navy / royal blue (from Danya's World oceanic palette).
+   Accents/Margins/Buttons: Warm refined gold (identical to Danya's World).
+   Secondary/Explore Gradients: Earthy greens (from Danya's World canvas).
+   Typography: High-contrast warm cream / ivory on dark oceanic blue.
+   ========================================================================== */
+
+:root {
+  /* Base Oceanic & Navy Blues (Dominant Canvas & Surfaces) */
+  --color-blue-base: #101f2c;          /* Main page background */
+  --color-blue-deepest: #0a141d;       /* Deepest contour / footer / shadow */
+  --color-blue-forest: #142738;        /* Secondary container background */
+  --color-blue-card: #1c354a;          /* Card surface background */
+  --color-blue-card-hover: #24445e;    /* Card hover background */
+  --color-blue-slate: #6b8ea9;         /* Muted blue lines / subtext */
+  --color-blue-mist: #223e54;          /* Subtle border / dividers */
+  --color-blue-surface: rgba(28, 53, 74, 0.72);
+
+  /* Warm Gold Accents (Borders, Margins, Buttons, Highlights) — 100% Identical to Danya's World */
+  --color-gold-warm: #cca762;          /* Primary refined gold */
+  --color-gold-bright: #e5c98d;        /* Hover gold highlight */
+  --color-gold-deep: #a88339;          /* Deep antique gold */
+  --color-gold-tint: rgba(204, 167, 98, 0.14); /* Light gold fill */
+  --color-gold-border: rgba(204, 167, 98, 0.38); /* Elegant gold margin/border */
+  --color-gold-border-bright: rgba(204, 167, 98, 0.75);
+
+  /* Mirrored Earthy Greens (From Danya's World for Gradient & Accent Interplay) */
+  --color-green-accent: #193021;       /* Danya's World forest green */
+  --color-green-moss: #213c2b;         /* Danya's World moss green */
+  --color-green-sage: #75927d;         /* Sage lines / tech tags */
+  --color-green-mist: rgba(33, 60, 43, 0.45); /* Subtle green tint */
+
+  /* Text & Inks (Warm Cream / Ivory on Dark Blue) */
+  --color-ink-primary: #f7f6f0;        /* High-contrast crisp ivory text */
+  --color-ink-secondary: #cdd9e2;      /* Soft slate-cream secondary text */
+  --color-ink-muted: #8ca3b5;          /* Subtle muted blue text */
+  --color-ink-accent: #e5c98d;         /* Golden text highlights */
+  --color-ink-inverse: #101f2c;        /* Dark text for gold-filled buttons */
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+  /* Layout & Sizing */
+  --container-max-width: 1140px;
+  --container-narrow-width: 820px;
+  --container-padding: 1.5rem;
+  --nav-height: 4.25rem;
+
+  /* Elevation & Shadows */
+  --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-medium: 0 6px 22px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 16px rgba(204, 167, 98, 0.18);
+
+  /* Borders & Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
