@@ -207,17 +207,60 @@
   box-shadow: 0 0 12px rgba(204, 167, 98, 0.4);
 }
 
-/* 2-Column Piano Videos Grid: Primary (wider) + Supporting */
+/* 2-Column Piano Videos Grid: Primary + Supporting Stack (piano2 + flauta) */
 .piano-videos-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
+  grid-template-columns: 1.12fr 1fr;
   gap: 1.75rem;
   align-items: start;
+}
+
+.piano-main-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.piano-main-column .video-primary video {
+  max-height: 520px;
+}
+
+.piano-supporting-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.supporting-video-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.supporting-video-item .video-wrapper {
+  height: 205px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supporting-video-item .video-wrapper video {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  max-height: 205px;
 }
 
 @media (max-width: 860px) {
   .piano-videos-grid {
     grid-template-columns: 1fr;
+  }
+
+  .supporting-video-item .video-wrapper {
+    height: auto;
+  }
+
+  .supporting-video-item .video-wrapper video {
+    max-height: 340px;
   }
 }
 

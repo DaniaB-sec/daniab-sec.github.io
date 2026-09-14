@@ -77,10 +77,10 @@
             </p>
           </div>
 
-          <!-- 2-Column Piano Videos Grid: piano1 (Primary) and piano2 (Supporting) -->
+          <!-- 2-Column Piano & Supporting Videos Grid: piano1 (Primary) and piano2 + flauta (Supporting Stack) -->
           <div class="piano-videos-grid">
             <!-- Piano 1: Main Piece (Visually prominent, draws the eye first) -->
-            <div>
+            <div class="piano-main-column">
               <span class="video-badge primary">&#9733; Main Piece</span>
               <div class="video-wrapper video-primary">
                 <video controls playsinline preload="metadata">
@@ -93,18 +93,35 @@
               </p>
             </div>
 
-            <!-- Piano 2: Supporting Addition (Right next to piano1) -->
-            <div>
-              <span class="video-badge">Supporting Addition</span>
-              <div class="video-wrapper">
-                <video controls playsinline preload="metadata">
-                  <source src="sources/piano2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+            <!-- Supporting Additions Stack: piano2 on top, flauta underneath -->
+            <div class="piano-supporting-stack">
+              <!-- Supporting Piece 1: Piano 2 -->
+              <div class="supporting-video-item">
+                <span class="video-badge">Supporting Addition &bull; Piano</span>
+                <div class="video-wrapper">
+                  <video controls playsinline preload="metadata">
+                    <source src="sources/piano2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p style="margin-top: 0.5rem; font-size: 0.88rem; color: var(--color-ink-secondary);">
+                  [Text Placeholder: Notes on this supporting piano piece]
+                </p>
               </div>
-              <p style="margin-top: 0.65rem; font-size: 0.9rem; color: var(--color-ink-secondary);">
-                [Text Placeholder: Notes on this supporting piano piece]
-              </p>
+
+              <!-- Supporting Piece 2: Flute (flauta.mp4) -->
+              <div class="supporting-video-item">
+                <span class="video-badge">Supporting Addition &bull; Flute</span>
+                <div class="video-wrapper">
+                  <video controls playsinline preload="metadata">
+                    <source src="sources/flauta.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p style="margin-top: 0.5rem; font-size: 0.88rem; color: var(--color-ink-secondary);">
+                  [Text Placeholder: Notes on acoustic flute performance]
+                </p>
+              </div>
             </div>
           </div>
         </div>
